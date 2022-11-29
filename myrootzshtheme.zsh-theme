@@ -1,5 +1,5 @@
 PROMPT="
-%{$fg_bold[black]%}%D{%Y-%m-%d %H:%M:%S}%{$reset_color%} "
+%{$fg[white]%}%D{%Y-%m-%d %H:%M:%S}%{$reset_color%} "
 PROMPT+="%{$fg_bold[red]%}%n@%m%{$reset_color%}:"
 PROMPT+='%{$fg_bold[yellow]%}%~%{$reset_color%} $(git_prompt_info)'
 

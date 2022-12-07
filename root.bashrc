@@ -102,6 +102,7 @@ alias exp='expect'
 
 alias www="cd /var/www/html"
 alias web="cd /var/www/html/application"
+alias app="cd /var/www/html/application"
 
 alias chd="find . -type d -exec chmod 755 '{}' \\;"
 alias chf="find . -type f -exec chmod 644 '{}' \\;"
@@ -114,3 +115,6 @@ alias ga.='git add .'
 alias gcaem='git commit --allow-empty-message'
 alias gcaemm='git commit --allow-empty-message -m ""'
 alias glor='git pull origin'
+
+alias kds='rm .DS_Store'
+alias kdsa="find . -name .DS_Store -exec rm '{}' \;"

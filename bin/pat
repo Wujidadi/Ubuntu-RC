@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-$arg = $argv[1] ? escapeshellarg($argv[1]) : '';
+$arg = isset($argv[1]) ? escapeshellarg($argv[1]) : '';
 $target = preg_replace('/\\\{1,}/', '\\\\\\', $arg);
 $command = 'php artisan test --color=always --filter '.$target;
 echo shell_exec($command);

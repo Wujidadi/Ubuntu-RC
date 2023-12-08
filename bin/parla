@@ -1,0 +1,7 @@
+#!/usr/bin/env php
+<?php
+
+$arg = isset($argv[1]) ? escapeshellarg($argv[1]) : '';
+$path = preg_replace('/\\\{1,}/', '\\\\\\', $arg);
+$command = 'php artisan route:list --color=always --path='.$path;
+echo shell_exec($command);

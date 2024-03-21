@@ -3,5 +3,8 @@
 
 $arg = isset($argv[1]) ? escapeshellarg($argv[1]) : '';
 $path = preg_replace('/\\\{1,}/', '\\\\\\', $arg);
+if (preg_match('/^\'*\//', $path)) {
+    $path = preg_replace('/(^\'*)\//', '$1', $path);
+}
 $command = 'php artisan route:list --ansi --path='.$path;
 echo shell_exec($command);
